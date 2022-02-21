@@ -1,1 +1,20 @@
-<p>header works!</p>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <mat-icon aria-hidden="false" aria-label="home icon" routerLink="/"
+      >home</mat-icon
+    >
+    <button mat-button [matMenuTriggerFor]="menuBeer">Beers</button>
+    <mat-menu #menuBeer="matMenu">
+      <button mat-menu-item routerLink="beers">Beer 1</button>
+      <button mat-menu-item>Beer 2</button>
+    </mat-menu>
+    <button mat-button [matMenuTriggerFor]="menuCocktail">Cocktail</button>
+    <mat-menu #menuCocktail="matMenu">
+      <button mat-menu-item routerLink="cocktails">Cocktail 1</button>
+      <button mat-menu-item>Cocktail 2</button>
+    </mat-menu>
+    <div class="header-right">
+      <app-login></app-login>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
