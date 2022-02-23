@@ -4,3 +4,6 @@
 .mat-tab-group {
   margin-bottom: 48px;
 }
+.header-content {
+  gap: 15px;
+}

@@ -1,0 +1,7 @@
+.header-subhead {
+  flex-wrap: wrap;
+  padding: 14px 16px;
+  gap: 15px;
+  min-height: 64px;
+  height: auto;
+}
