@@ -1,6 +1,3 @@
 <mat-toolbar class="header-subhead">
-  <a mat-raised-button>Buzz</a>
-  <a mat-raised-button>Trashy Blonde</a>
-  <a mat-raised-button>Berliner Weisse</a>
-  <a mat-raised-button>Other/Unknown</a>
+  <a mat-raised-button *ngFor="let beer of data">{{ beer.Category }}</a>
 </mat-toolbar>
