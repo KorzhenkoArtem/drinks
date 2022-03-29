@@ -23,7 +23,6 @@ export interface BeersResponse {
 export class ApiService {
   constructor(private http: HttpClient) {}
 
-  //метод getBeersCategories
   getBeersCategories(): Observable<BeersResponse> {
     let url = 'https://api.punkapi.com/v2/beers';
     return this.http.get(url) as Observable<BeersResponse>;
