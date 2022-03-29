@@ -11,7 +11,7 @@ export class CocktailsComponent implements OnInit {
   constructor(private readonly apiService: ApiService) {}
 
   ngOnInit(): void {
-    this.apiService.getCocktails().subscribe((resp) => {
+    this.apiService.getCocktailsCategories().subscribe((resp) => {
       this.data = resp.drinks;
     });
   }

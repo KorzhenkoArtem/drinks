@@ -28,7 +28,7 @@ export class ApiService {
     return this.http.get(url) as Observable<BeersResponse>;
   }
 
-  getCocktails(): Observable<CocktailsResponse> {
+  getCocktailsCategories(): Observable<CocktailsResponse> {
     let url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?c=list';
     return this.http.get(url) as Observable<CocktailsResponse>;
   }
