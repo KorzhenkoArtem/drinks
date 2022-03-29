@@ -11,7 +11,8 @@ export interface CocktailsResponse {
 }
 
 export interface Beer {
-  Category: string;
+  id: number;
+  name: string;
 }
 export interface BeersResponse {
   drinks: Beer[];
