@@ -13,6 +13,7 @@ export interface CocktailsResponse {
 export interface Beer {
   id: number;
   name: string;
+  first_brewed: Date;
 }
 export interface BeersResponse {
   drinks: Beer[];
