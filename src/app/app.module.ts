@@ -19,6 +19,8 @@ import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
+import { LoginPopup } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     HomeComponent,
     NotFoundComponent,
     LoginComponent,
+    LoginPopup,
   ],
   imports: [
     BrowserModule,
@@ -44,6 +47,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatMenuModule,
     HttpClientModule,
     MatDialogModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

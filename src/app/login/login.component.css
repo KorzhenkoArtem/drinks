@@ -1,0 +1,9 @@
+.form-buttons {
+  min-width: 400px;
+}
+
+@media (max-width: 576px) {
+  .form-buttons {
+    min-width: auto;
+  }
+} ;

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
@@ -18,5 +19,16 @@ export class LoginComponent implements OnInit {
 @Component({
   selector: 'app-login-popup',
   templateUrl: './login-popup.component.html',
+  styleUrls: ['./login.component.css'],
 })
-export class LoginPopup {}
+export class LoginPopup {
+  isLoginMode = true;
+
+  onSubmit(form: NgForm) {
+    localStorage.setItem('form-data', JSON.stringify(form.value));
+    form.reset();
+  }
+  onSwitchMode() {
+    this.isLoginMode = !this.isLoginMode;
+  }
+}
