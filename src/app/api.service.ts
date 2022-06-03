@@ -23,6 +23,9 @@ export interface BeersResponse {
   providedIn: 'root',
 })
 export class ApiService {
+  getData() {
+    throw new Error('Method not implemented.');
+  }
   constructor(private http: HttpClient) {}
 
   getBeersCategories(): Observable<BeersResponse> {

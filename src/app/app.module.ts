@@ -21,6 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatDialogModule } from '@angular/material/dialog';
 import { LoginPopup } from './login/login.component';
 import { FormsModule } from '@angular/forms';
+import { UsersGuard } from './guards/users.guard';
+import { AuthService } from './services/auth.service';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,7 @@ import { FormsModule } from '@angular/forms';
     MatDialogModule,
     FormsModule,
   ],
-  providers: [],
+  providers: [UsersGuard, AuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

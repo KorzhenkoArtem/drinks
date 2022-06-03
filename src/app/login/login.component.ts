@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -23,9 +25,16 @@ export class LoginComponent implements OnInit {
 })
 export class LoginPopup {
   isLoginMode = true;
+  router: any;
+
+  constructor(public auth: AuthService) {}
 
   onSubmit(form: NgForm) {
-    localStorage.setItem('form-data', JSON.stringify(form.value));
+    if (this.isLoginMode) {
+      this.auth.signUp(form.value);
+    } else {
+      this.auth.signIn(form.value);
+    }
     form.reset();
   }
   onSwitchMode() {

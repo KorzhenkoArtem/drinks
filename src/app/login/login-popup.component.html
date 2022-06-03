@@ -1,6 +1,10 @@
 <div class="row">
   <div class="col-xs-12 col-md-offset-3">
-    <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+    <form
+      #authForm="ngForm"
+      (ngSubmit)="onSubmit(authForm)"
+      class="login-popup_form"
+    >
       <div class="form-group">
         <label for="email">E-Mail</label>
         <input
@@ -32,13 +36,19 @@
           type="submit"
           [disabled]="!authForm.valid"
         >
-          {{ isLoginMode ? "Login" : "Sign Up" }}
+          {{ isLoginMode ? "Sign up" : "Login" }}
         </button>
         |
-        <button class="btn btn-primary" (click)="onSwitchMode()" type="button">
-          Switch to {{ isLoginMode ? "Sign up" : "Login" }}
+        <button
+          class="btn btn-primary"
+          (click)="onSwitchMode()"
+          type="button"
+          routerLink=""
+        >
+          Switch to {{ isLoginMode ? "Login" : "Sign Up" }}
         </button>
       </div>
+      <a [mat-dialog-close] class="login-popup_close">X</a>
     </form>
   </div>
 </div>
